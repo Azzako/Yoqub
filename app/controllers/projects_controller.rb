@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/1 or /projects/1.json
   def show
-    if @project
+    if @project.exists?
     if @project.user_id == current_user.id
       
     else
